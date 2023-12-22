@@ -13,6 +13,8 @@ public:
 	int getSeatCount() { return this->seatCount; }
 	std::string getLayout() { return this->layout; }
 
+	~Car();
+
 	Car() : Vehicle(), seatCount{ 4 }, layout{ "FF" } {}
 
 	Car(int _seatCount, std::string _layout, std::string _model, int _year, int _power, std::string _reg)

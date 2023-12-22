@@ -12,6 +12,7 @@ public:
 	int getMass() { return this->mass; }
 	int getWheelCount() { return this->wheelCount; }
 	int getCargoCapacity() { return this->cargoCapacity; }
+	~Truck();
 
 	Truck() : Vehicle(), mass{ 1000 }, wheelCount{ 4 }, cargoCapacity{ 1000 } {}
 

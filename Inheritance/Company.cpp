@@ -1,6 +1,6 @@
-#pragma once
 #include <string>
 #include <vector>
+#include "Company.h"
 #include "Employee.h"
 #include "Vehicle.h"
 
@@ -27,7 +27,9 @@ public:
 
 	void setCapital(int capital) { this->capital = capital; }
 	int getCapital() { return this->capital; }
-	~Company();
+	~Company() {
+		printf("Company %s has been dissolved", this->name);
+	}
 	Company()
 		: director{ Employee() }, capital{ 0 }, name{ "Шаблон компании" }, employees{ std::vector<Employee>() }, vehicles{ std::vector<Vehicle>() } {};
 	Company(Employee _director, int _startCapital, std::string _name, std::vector<Employee> _employees, std::vector<Vehicle> _vehicles)

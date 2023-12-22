@@ -21,6 +21,7 @@ public:
 
 	void setSalary(int salary) { this->salary = salary; }
 	int getSalary() { return this->salary; }
+	~Employee();
 
 	Employee() {
 		this->name = "aboba";

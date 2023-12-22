@@ -13,6 +13,9 @@ public:
 	int getAssemblyYear() { return this->assemblyYear; }
 	int getEnginePower() { return horsepowers; }
 	std::string getModel() { return this->model; }
+	~Vehicle() {
+		printf("Vehicle %s has been destroyed", this->registrationNumber);
+	}
 
 	Vehicle()
 		: horsepowers{ 1 }, assemblyYear{ 2000 }, model{ "Москвич девятка" }, registrationNumber{ "12ААА345-00" } {}

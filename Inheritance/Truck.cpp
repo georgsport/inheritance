@@ -11,7 +11,9 @@ public:
 	int getMass() { return this->mass; }
 	int getWheelCount() { return this->wheelCount; }
 	int getCargoCapacity() { return this->cargoCapacity; }
-
+	~Truck() {
+		printf("Truck %s has been destroyed", this->registrationNumber);
+	}
 	Truck() : Vehicle(), mass{ 1000 }, wheelCount{ 4 }, cargoCapacity{ 1000 } {}
 
 	Truck(int _mass, int _wheelCount, int _cargoCap, std::string _model, int _year, int _power, std::string _reg)

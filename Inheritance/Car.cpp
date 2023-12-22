@@ -11,6 +11,9 @@ public:
 	std::string getTransmission() { return this->transmission; }
 	int getSeatCount() { return this->seatCount; }
 	std::string getLayout() { return this->layout; }
+	~Car() {
+		printf("Car %s has been destroyed", this->registrationNumber);
+	}
 
 	Car() : Vehicle(), seatCount{ 4 }, layout{ "FF" } {}
 

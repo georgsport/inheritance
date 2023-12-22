@@ -23,6 +23,9 @@ public:
 
 	void setSalary(int salary) { this->salary = salary; }
 	int getSalary() { return this->salary; }
+	~Employee() {
+		printf("Employee %s has been fired", this->name);
+	}
 
 	Employee() {
 		this->name = "aboba";
